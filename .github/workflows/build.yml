@@ -18,7 +18,10 @@ jobs:
           distribution: temurin
           java-version: '8'
 
-      - name: Build project
-        run: |
-          echo "OREESP build environment ready"
-          java -version
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '2.14.1'
+
+      - name: Build OREESP
+        run: gradle clean build --no-daemon
