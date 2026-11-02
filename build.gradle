@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.oreesp'
+version = '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
