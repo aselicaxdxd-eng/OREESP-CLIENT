@@ -1,12 +1,30 @@
-plugins {
-    id 'java'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url = "https://maven.minecraftforge.net"
+        }
+    }
+
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+    }
 }
 
-group = 'com.oreesp'
-version = '1.0'
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+version = "1.0"
+group = "com.oreesp"
+archivesBaseName = "OREESP"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+minecraft {
+    version = "1.8.9-11.15.1.2318"
+    runDir = "run"
+}
 
 repositories {
     mavenCentral()
